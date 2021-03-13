@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root {
+    --black: #000;
+    --orange: #ff8a0e;
+    --gray: #404040;
+    --lighGray: #f3f3f3;
+    --white: #fff;
+    --padding: 70px 0;
+    --font: 16px;
+    --transition: .3s ease;
+}
+/*********************
+basic styles
+*********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font);
+    line-height: 1.6;
+    color: var(--gray);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2::after {
+    display: block;
+    content: "";
+    width: 80px;
+    background: var(--orange);
+    height: 3px;
+    margin: 20px auto;
+}
+button {
+    background: var(--orange);
+    border: none;
+    padding: 15px 60px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+button:hover {
+    background: var(--gray);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--white);
+}
+/*********************
+header
+*********************/
+header {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    border-bottom: 20px solid rgba(0,0,0,.5);
+}
+header h1 {
+    font-size: 3rem;
+    background: var(--black);
+    display: inline-block;
+    padding: 15px 50px;
+    color: var(--white);
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+header nav {
+    background: var(--orange);
+    display: inline-block;
+    margin-left: 200px;
+    padding: 5px 30px;
+}
+header nav ul li {
+    display: inline-block;
+    padding: 5px 30px;
+}
+header nav ul li a {
+    color: var(--white);
+}
+/*********************
+about
+*********************/
+.about {
+    padding: var(--padding);
+    background: var(--lighGray);
+    text-align: center;    
+}
+.about h2 {
+    font-size: 2rem;
+}
+/*********************
+services
+*********************/
+.services {
+    padding: var(--padding);
+}
+.services article {
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding: 0 30px;
+}
+.services article h3 P{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+/*********************
+products
+*********************/
+.products {
+    padding: var(--padding);
+    background: var(--lighGray);
+    text-align: center;
+}
+.products img {
+    width: 100%;
+}
+.products article {
+    width: 25%;
+    float: left;
+    padding: 30px;
+}
+.products h5 {
+    font-size: 1.5rem;
+    padding: 20px 0;
+}
+/*********************
+footer
+*********************/
+footer {
+    padding: var(--padding);
+    background: var(--gray);
+    color: var(--white);
+    text-align: center;
+}
+footer .fa-heart {
+    color: red;
+}
+footer .fab {
+    color: var(--orange);
+    margin: 10px;
+    font-size: 2rem;
+}
+footer .fab:hover {
+    color: var(--white);
+    transition: var(--transition);
+}
+/*********************
+responsive
+*********************/
+@media(min-width: 768px) and (max-width: ){
+    .products article {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+}
+@media(max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    header {
+        border-bottom: 10px solid rgba(0,0,0,.5);
+    }
+    header nav {
+        margin-left: 20px;
+        padding: 5px;
+    }
+    header h1 {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    header nav ul li {
+        display: inline-block;
+        padding: 5px;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .about h2 {
+        line-height: 1;
+    }
+    .services article,.products article {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+}
